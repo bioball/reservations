@@ -1,0 +1,1 @@
+Greetings, weary internet traveller. This is just a simple CRUD app built on Angular, with a RESTful Sinatra backend.
