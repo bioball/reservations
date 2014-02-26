@@ -5,8 +5,20 @@
 </div>
 </div>
 <table>
+  <colgroup>
+    <col span="1" class="col col-id">
+    <col span="1" class="col col-name">
+    <col span="1" class="col col-phone">
+    <col span="1" class="col col-email">
+    <col span="1" class="col col-date">
+    <col span="1" class="col col-time">
+    <col span="1" class="col col-party">
+    <col span="1" class="col col-editdel">
+    <col span="1" class="col col-editdel">
+  </colgroup>
   <thead>
     <tr>
+      <th class="id">id</th>
       <th>Name</th>
       <th>Phone number</th>
       <th>Email</th>
@@ -17,6 +29,7 @@
   </thead>
   <tbody>
     <tr ng-repeat="reservation in reservations">
+      <td>{{ reservation.id }}</td>
       <td>{{ reservation.name }}</td>
       <td>{{ reservation.phone_number }}</td>
       <td>{{ reservation.email }}</td>

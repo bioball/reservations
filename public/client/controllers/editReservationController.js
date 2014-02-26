@@ -41,7 +41,6 @@ angular.module('openTable')
         party_size: $scope.party_size,
         date: new Date(date)
       };
-      $rootScope.$apply();
       $location.path('/');
     }, function(err){
       $scope.hasError = true;

@@ -1,24 +1,24 @@
 <h1>New reservation!</h1>
-<div ng-if="hasError">Whoop! There are some errors here.
+<div ng-if="hasError" class="err">Whoop! There are some errors here.
   <ul>
     <li ng-repeat="error in err"> {{ error }}</li>
   </ul>
 </div>
 <form>
-  <div>
-    <label>Name</labe>
+  <div class="field">
+    <label>Name</label>
   <input type="text" ng-model="name"></input>
   </div>
-  <div>
+  <div class="field">
     <label>Phone Number</label>
     <input type="text" ng-model="phone_number" ui-mask="(999) 999-9999"></input>
   </div>
-  <div>
+  <div class="field">
     <label>Email</label>
     <input type="text" ng-model="email"></input>
   </div>
-  <div>
-  <label>Party Size</label>
+  <div class="field">
+    <label>Party Size</label>
     <input list="size" ng-model="party_size">
     <datalist id="size">
       <option value="1">
@@ -31,11 +31,11 @@
       <option value="8">
     </datalist>
   </div>
-  <div>
+  <div class="field">
     <label>Date</label>
     <input type="date" ng-model="date"></input>
   </div>
-  <div>
+  <div class="field">
     <label>Time</label>
     <input type="text" ui-mask="99:99" ng-model="time"></input>
   </div>
