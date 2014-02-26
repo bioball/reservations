@@ -1,0 +1,43 @@
+<h1>Edit reservation!</h1>
+<div ng-if="hasError">Whoop! There are some errors here.
+  <ul>
+    <li ng-repeat="error in err"> {{ error }}</li>
+  </ul>
+</div>
+<form>
+  <div>
+    <label>Name</labe>
+  <input type="text" ng-model="name"></input>
+  </div>
+  <div>
+    <label>Phone Number</label>
+    <input type="text" ng-model="phone_number" ui-mask="(999) 999-9999"></input>
+  </div>
+  <div>
+    <label>Email</label>
+    <input type="text" ng-model="email"></input>
+  </div>
+  <div>
+  <label>Party Size</label>
+    <input list="size" ng-model="party_size">
+    <datalist id="size">
+      <option value="1">
+      <option value="2">
+      <option value="3">
+      <option value="4">
+      <option value="5">
+      <option value="6">
+      <option value="7">
+      <option value="8">
+    </datalist>
+  </div>
+  <div>
+    <label>Date</label>
+    <input type="date" ng-model="date"></input>
+  </div>
+  <div>
+    <label>Time</label>
+    <input type="text" ui-mask="99:99" ng-model="time"></input>
+  </div>
+  <button ng-click="submit()">Submit</button>
+</form>

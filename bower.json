@@ -1,0 +1,22 @@
+{
+  "name": "opentable",
+  "version": "0.0.0",
+  "authors": [
+    "Daniel Chao <daniel.h.chao@gmail.com>"
+  ],
+  "description": "OpenTable application",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.13",
+    "angular-route": "~1.2.13",
+    "angular-ui-utils": "~0.1.1"
+  }
+}

@@ -1,0 +1,30 @@
+<h1>All reservations</h1>
+<a href="#/reservations/new/">Enter new reservation</a>
+<div ng-if="hasError">
+  {{ err }}
+</div>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Phone number</th>
+      <th>Email</th>
+      <th>Date</th>
+      <th>Time</th>
+      <th>Party Size</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="reservation in reservations">
+      <td>{{ reservation.name }}</td>
+      <td>{{ reservation.phone_number }}</td>
+      <td>{{ reservation.email }}</td>
+      <td>{{ reservation.date | date: 'shortDate' }}</td>
+      <td>{{ reservation.date | date: 'h:mma' }}</td>
+      <td>{{ reservation.party_size }}</td>
+      <td><a href="#/reservations/edit/{{ reservation.id }}">Edit</a></td>
+      <td><a href="#" ng-click="delete($event, reservation.id)">Delete</a></td>
+    </tr>
+  </tbody>
+</table>
