@@ -27,19 +27,19 @@ angular.module('openTable')
     var time = $scope.time.substr(0,2) + ':' + $scope.time.substr(2,4)
     var date = new Date($scope.date + ' ' + time).toUTCString();
     reservationsServices.update($routeParams.id, {
-      name: $scope.name,
+      name:         $scope.name,
       phone_number: $scope.phone_number,
-      email: $scope.email,
-      party_size: $scope.party_size,
-      date: date
+      email:        $scope.email,
+      party_size:   $scope.party_size,
+      date:         date
     }).then(function(){
       $rootScope.reservations[$routeParams.id] = {
-        id: $routeParams.id,
-        name: $scope.name,
+        id:           $routeParams.id,
+        name:         $scope.name,
         phone_number: $scope.phone_number,
-        email: $scope.email,
-        party_size: $scope.party_size,
-        date: new Date(date)
+        email:        $scope.email,
+        party_size:   $scope.party_size,
+        date:         new Date(date)
       };
       $location.path('/');
     }, function(err){

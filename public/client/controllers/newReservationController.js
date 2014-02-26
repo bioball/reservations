@@ -1,5 +1,6 @@
 angular.module('openTable')
 .controller('newReservationController', function($scope, $location, $rootScope, reservationsServices){
+
   if($rootScope.reservations === undefined){
     reservationsServices.read().then(function(data){
       // hash the reservations for quick lookup
@@ -7,14 +8,12 @@ angular.module('openTable')
         hash[res.id] = res;
         return hash;
       }, {});
-      setScope();
     }, function(err){
       $rootScope.err = err;
       $rootScope.hasErr = true;
     });
-  } else {
-    setScope();
   }
+  
   $scope.submit = function(){
     var time = $scope.time.substr(0,2) + ':' + $scope.time.substr(2,4)
     var date = new Date($scope.date + ' ' + time).toUTCString();

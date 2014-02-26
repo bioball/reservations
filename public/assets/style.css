@@ -40,11 +40,36 @@ button {
   width: 10em;
   background-color: transparent;
   font-size: 1.2em;
+  color: #16527A;
 }
 
 button:hover {
   background-color: #8ADFF2;
   color: white;
+}
+
+table {
+  border-spacing: 0;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  margin: 0;
+}
+
+tr {
+  height: 2em;
+}
+
+tr:nth-child(even){
+  background: #C9E9F0;
+}
+
+tr:hover {
+  background: #F5F1E9;
 }
 
 .field {
@@ -57,19 +82,35 @@ button:hover {
 }
 
 .col {
-  width: 80px;
+  width: 7em;
 }
 
 .col-id {
-  width: 40px;
+  width: 2em;
 }
 
-th {
-  text-align: left;
+.col-phone {
+  width: 8em;
 }
 
 .col-editdel {
-  width: 40px;
+  width: 3em;
+}
+
+.col-name {
+  width: 8em;
+}
+
+.col-date {
+  width: 4em;
+}
+
+.col-time {
+  width: 4em;
+}
+
+.col-party {
+  width: 5em;
 }
 
 .err {
@@ -84,6 +125,4 @@ h1 {
   font-style: italic;
 }
 
-tr:nth-child(even){
-  background: #C9E9F0;
-}
+.
